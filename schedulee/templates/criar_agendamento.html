@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'schedulee/styles.css' %}">
+</head>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+        criar
+    </button>
+</form>
+<button onclick= "window.location.href='{% url 'listar_agendamentos' %}'">
+    Ver lista de agendamentos
+</button>
+
+<div>
+    <p id="Bahia">
+        Bahia
+    </p>
+    <p>
+        >>>>>>>>>>>>
+    </p>
+</div>
+
+</html>

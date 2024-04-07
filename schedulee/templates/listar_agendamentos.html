@@ -1,0 +1,10 @@
+<ul>
+    {% for agendamento in agendamentos %}    
+        <li>
+            {{agendamento.titulo}} {{agendamento.data_hora}}
+        </li>
+    {% endfor %}
+</ul>
+<button onclick="window.location.href='{% url 'criar_agendamento' %}'">
+    Criar agendamento
+</button>
